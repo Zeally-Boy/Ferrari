@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Created By Codecary -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+    <link rel="shortcut icon" href="/static/favicon.ico"/>        
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Login Form</h1>
+    <form action="{{ url_for('login') }}" method="post">
+     <div class="msg">{{ msg }}</div>
+        <div class="form-control">
+          <input type="text" required>
+          <label>Fullname</label>
+        </div>
+        <div class="form-control">
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <button class="btn">Login</button>
+         <p class="bottom">Don't have an account?  <a class="bottom" href="{{url_for('register')}}"> Sign Up here</a></p>
+    </form>
+  </div>
+
+  <script src="static/js.js"></script>
+</body>
+</html>
